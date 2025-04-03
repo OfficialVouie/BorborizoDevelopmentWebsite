@@ -1,0 +1,251 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #333;
+}
+
+header .logo img {
+    max-width: 150px;
+    transition: transform 0.3s ease;
+}
+
+header:hover .logo img {
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    font-weight: 600;
+}
+
+nav ul li a {
+    color: #fff;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+nav ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00bcd4;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    position: relative;
+    text-align: center;
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #00bcd4;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #ff8c00;
+}
+
+/* About Section */
+.about {
+    background-color: #1e1e1e;
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.about .section-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #121212;
+    padding: 100px 20px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.contact .section-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #00bcd4;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact a:hover {
+    background-color: #ff8c00;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-links {
+    margin-bottom: 10px;
+}
+
+footer .social-icon {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icon:hover {
+    color: #00bcd4;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #888;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    .cta-button {
+        font-size: 1.1rem;
+    }
+}
