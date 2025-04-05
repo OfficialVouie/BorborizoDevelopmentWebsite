@@ -1,46 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borborizo Studios</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="firebase-config.js"></script>
-    <script type="module" src="app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Borborizo Development - Game Studio">
+  <title>Borborizo Development - Under Construction</title>
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #101010;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #f39c12;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .progress-bar {
+      width: 60%;
+      height: 8px;
+      background-color: #444;
+      border-radius: 5px;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .progress {
+      width: 50%; /* Simulate progress */
+      height: 100%;
+      background-color: #f39c12;
+      border-radius: 5px;
+      animation: progressBar 3s ease-in-out infinite;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 1rem;
+      color: #ccc;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    footer a {
+      color: #f39c12;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Keyframes */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes progressBar {
+      0% {
+        width: 50%;
+      }
+      50% {
+        width: 75%;
+      }
+      100% {
+        width: 50%;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white">
-    <nav class="p-4 bg-gray-800 flex justify-between">
-        <h1 class="text-xl font-bold">Borborizo Studios</h1>
-        <div>
-            <a href="index.html" class="px-4 py-2 bg-gray-700 rounded">Home</a>
-            <a href="login.html" class="px-4 py-2 bg-blue-500 rounded">Login</a>
-            <a href="signup.html" class="px-4 py-2 bg-green-500 rounded">Sign Up</a>
-            <a href="dashboard.html" class="px-4 py-2 bg-purple-500 rounded">Dashboard</a>
-        </div>
-    </nav>
-    
-    <header class="text-center py-20">
-        <h2 class="text-4xl font-bold">Welcome to Borborizo Studios</h2>
-        <p class="mt-4">We create immersive VR and Gorilla Tag fan experiences.</p>
-    </header>
-    
-    <section class="p-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-2xl font-bold">Our Games</h3>
-            <p>Explore our latest projects and upcoming releases.</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-2xl font-bold">Join Us</h3>
-            <p>Sign up to get early access and behind-the-scenes content.</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-2xl font-bold">Contact</h3>
-            <p>Have questions? Reach out to us anytime.</p>
-        </div>
-    </section>
-    
-    <footer class="text-center p-4 bg-gray-800 mt-10">
-        &copy; 2025 Borborizo Studios. All rights reserved.
-    </footer>
+<body>
+
+  <h1>Borborizo Development</h1>
+  <p>Our website is under construction. Please check back later!</p>
+
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Borborizo Development. All rights reserved.</p>
+    <p>Join us on <a href="https://discord.gg/gmb4dnVkRX" target="_blank">Discord</a> for updates.</p>
+  </footer>
+
 </body>
 </html>
